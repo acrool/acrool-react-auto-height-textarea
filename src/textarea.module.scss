@@ -19,6 +19,7 @@
 
     .mainTextarea{
         height: var(--textarea-height, 100%);
+        overflow: hidden;
     }
 
     .fake-textarea{
@@ -28,5 +29,6 @@
         z-index: -1;
         visibility: hidden;
         pointer-events: none;
+        width: 100%;
     }
 }
