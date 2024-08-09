@@ -1,0 +1,32 @@
+.root *,
+.root *::before,
+.root *::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    line-height: normal;
+}
+
+
+.root{
+    position: relative;
+    --textarea-line-height: 1.5;
+    --textarea-font-size: 14px;
+
+    .mainTextarea, .fake-textarea{
+        line-height: var(--textarea-line-height);
+        font-size: var(--textarea-font-size);
+    }
+
+    .mainTextarea{
+        height: var(--textarea-height, 100%);
+    }
+
+    .fake-textarea{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
