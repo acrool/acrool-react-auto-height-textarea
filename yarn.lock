@@ -2,18 +2,6 @@
 # yarn lockfile v1
 
 
-"@acrool/js-logger@^1.0.23":
-  version "1.0.23"
-  resolved "https://registry.yarnpkg.com/@acrool/js-logger/-/js-logger-1.0.23.tgz#2dd951fc3142cef0a9a050f02aaa4d94eab09042"
-  integrity sha512-UW4mXflIYYIKx4CaptY6HZmY+I2fRY76Eb/E4ACpEm7LXsZPdbgKwpGlzkky7212us8sPP8PyJnhWU7ftMhLXA==
-
-"@acrool/react-portal@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@acrool/react-portal/-/react-portal-1.0.1.tgz#2f8a11098aa9ec8786d2cde85261093eb571e2aa"
-  integrity sha512-oigaMgp/KJ8rd8WJtdVhlHSVI7+jzHV3ItyyUH6c0UqX1uW4m8fgqqxx1nVb3buY+MRLnVAbP6jLaObfZsz6Lw==
-  dependencies:
-    clsx "^2.1.1"
-
 "@ampproject/remapping@^2.2.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.3.0.tgz#ed441b6fa600072520ce18b43d2c8cc8caecc7f4"
@@ -6958,11 +6946,6 @@ uglify-js@^3.1.4:
   version "3.18.0"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.18.0.tgz#73b576a7e8fda63d2831e293aeead73e0a270deb"
   integrity sha512-SyVVbcNBCk0dzr9XL/R/ySrmYf0s372K6/hFklzgcp2lBFyXtw4I7BOdDjlLhE1aVqaI/SHWXWmYdlZxuyF38A==
-
-ulid@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/ulid/-/ulid-2.3.0.tgz#93063522771a9774121a84d126ecd3eb9804071f"
-  integrity sha512-keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"

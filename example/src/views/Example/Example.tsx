@@ -1,19 +1,38 @@
+import AuthHeightTextarea from '@acrool/react-auto-height-textarea';
 import {useState} from 'react';
 
 import Textarea from '../../components/Textarea';
-import AuthHeightTextarea from '@acrool/react-auto-height-textarea';
 
 
 const Example = () => {
-    const [value, setValue] = useState<string>('AppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleApple');
+    const [isVisible, setVisible] = useState(false);
+    const [value, setValue] = useState<string>('AppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleAppleApple');
 
 
-    return <div style={{display: 'flex', gap: '10px', maxWidth: '500px', alignItems: 'flex-start', width: '100%'}}>
+    const renderContent = () => {
 
-        <AuthHeightTextarea
-            value={value}
-            onChange={e => setValue(e.target.value)}
-        />
+        if(isVisible){
+            return <AuthHeightTextarea
+                value={value}
+                onChange={e => setValue(e.target.value)}
+            />;
+        }
+
+        return <div
+            style={{wordBreak: 'break-all'}}
+            className="text-left"
+        >
+            {value}
+        </div>;
+
+    };
+
+
+    return <div style={{maxWidth: '500px', width: '100%'}}>
+
+        <button type="button" onClick={() => setVisible(curr => !curr)}>{String(isVisible)}</button>
+
+        {renderContent()}
 
 
     </div>;
