@@ -35,25 +35,28 @@ const AuthHeightTextarea = (props: IProps, ref?: ForwardedRef<HTMLTextAreaElemen
         style={{visibility: isMount ? 'visible': 'hidden'}}
     >
         <textarea
+            {...props}
             ref={mainRef}
             className={clsx(styles.mainTextarea, props.className)}
             aria-multiline="false"
             aria-readonly="false"
             spellCheck="false"
             rows={props.rows}
-            {...props}
         />
 
-        <textarea
-            ref={fakeRef}
-            className={styles.fakeTextarea}
-            aria-multiline="false"
-            aria-readonly="false"
-            spellCheck="false"
-            value={props.value}
-            rows={props.rows}
-            readOnly
-        />
+        <div aria-hidden={true}>
+            <textarea
+                ref={fakeRef}
+                className={styles.fakeTextarea}
+                aria-multiline="false"
+                aria-readonly="false"
+                spellCheck="false"
+                value={props.value}
+                rows={props.rows}
+                readOnly
+            />    
+        </div>
+        
     </div>;
 };
 
