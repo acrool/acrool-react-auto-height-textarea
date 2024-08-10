@@ -12,7 +12,7 @@ const Example = () => {
 
         <AuthHeightTextarea
             value={value}
-            onChange={newValue => setValue(newValue)}
+            onChange={e => setValue(e.target.value)}
         />
 
 
