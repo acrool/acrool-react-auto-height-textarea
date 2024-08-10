@@ -10,12 +10,12 @@ interface IProps extends ComponentProps<'textarea'>{
 const AuthHeightTextarea = (props: IProps, ref?: ForwardedRef<HTMLTextAreaElement>) => {
     const mainRef = useRef<HTMLTextAreaElement>(null);
     const fakeRef = useRef<HTMLTextAreaElement>(null);
-    const [isMount, setMount] = useState<boolean>(false);
+    // const [isMount, setMount] = useState<boolean>(false);
 
 
-    useEffect(() => {
-        setMount(true);
-    }, []);
+    // useEffect(() => {
+    //     setMount(true);
+    // }, []);
 
     useEffect(() => {
         if(ref){
@@ -32,7 +32,7 @@ const AuthHeightTextarea = (props: IProps, ref?: ForwardedRef<HTMLTextAreaElemen
 
     return <div
         className={styles.root}
-        style={{visibility: isMount ? 'visible': 'hidden'}}
+        // style={{visibility: isMount ? 'visible': 'hidden'}}
     >
         <textarea
             {...props}
