@@ -15,6 +15,8 @@
     .mainTextarea, .fake-textarea{
         line-height: var(--textarea-line-height);
         font-size: var(--textarea-font-size);
+        resize: none;
+        overflow-wrap: break-word;
     }
 
     .mainTextarea{

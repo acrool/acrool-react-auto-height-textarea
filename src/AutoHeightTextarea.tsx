@@ -41,13 +41,12 @@ const AuthHeightTextarea = (props: IProps, ref?: ForwardedRef<HTMLTextAreaElemen
             aria-multiline="false"
             aria-readonly="false"
             spellCheck="false"
-            rows={props.rows}
         />
 
         <div aria-hidden={true}>
             <textarea
                 ref={fakeRef}
-                className={styles.fakeTextarea}
+                className={clsx(styles.fakeTextarea, props.className)}
                 aria-multiline="false"
                 aria-readonly="false"
                 spellCheck="false"
