@@ -1,4 +1,4 @@
-import AuthHeightTextarea from '@acrool/react-auto-height-textarea';
+import AuthHeightTextarea from './AutoHeightTextarea';
 import {AnimatePresence, motion, useMotionValue, Variant} from 'framer-motion';
 import {useState} from 'react';
 
@@ -33,12 +33,10 @@ const Example = () => {
                         animate={{opacity: 1,height: 100}}
                         exit={{opacity: 0,height: 'auto'}}
                     >
-                        <div
-                            key="box1"  style={{wordBreak: 'break-all', backgroundColor: 'lightblue'}}
-                            className="text-left"
-                        >
-                            {value}
-                        </div>
+                        <AuthHeightTextarea
+                            value={value}
+                            onChange={evt => setValue(evt.target.value)}
+                        />
                     </motion.div>
                     
                     :

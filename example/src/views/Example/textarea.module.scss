@@ -1,0 +1,41 @@
+.root *,
+.root *::before,
+.root *::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    line-height: normal;
+}
+
+
+.root{
+    position: relative;
+    --textarea-line-height: 1.5;
+    --textarea-font-size: 15px;
+    min-height: 100%;
+    width: 100%;
+
+
+    .mainTextarea, .fake-textarea{
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: var(--textarea-line-height);
+        font-size: var(--textarea-font-size);
+        resize: none;
+        overflow-wrap: break-word;
+        width: 100%;
+    }
+
+    .mainTextarea{
+        height: var(--textarea-height, 100%);
+        overflow: hidden;
+    }
+
+    .fake-textarea{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        visibility: hidden;
+        pointer-events: none;
+        width: 100%;
+    }
+}
