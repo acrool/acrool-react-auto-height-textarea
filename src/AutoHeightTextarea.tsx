@@ -8,9 +8,8 @@ interface IProps extends ComponentProps<'textarea'>{
 }
 
 const AuthHeightTextarea = (props: IProps, ref?: ForwardedRef<HTMLTextAreaElement>) => {
-    const mainRef = useRef<HTMLTextAreaElement>(null);
+    const mainRef = useRef<HTMLTextAreaElement|null>(null);
     const fakeRef = useRef<HTMLTextAreaElement>(null);
-    // const [isMount, setMount] = useState<boolean>(false);
 
 
     // useEffect(() => {
@@ -18,10 +17,6 @@ const AuthHeightTextarea = (props: IProps, ref?: ForwardedRef<HTMLTextAreaElemen
     // }, []);
 
     useEffect(() => {
-        if(ref){
-            ref = mainRef;
-        }
-
         if(mainRef.current && fakeRef.current){
             mainRef.current.style?.setProperty('--textarea-height', `${fakeRef.current.scrollHeight}px`);
         }
@@ -36,7 +31,14 @@ const AuthHeightTextarea = (props: IProps, ref?: ForwardedRef<HTMLTextAreaElemen
     >
         <textarea
             {...props}
-            ref={mainRef}
+            ref={node => {
+                mainRef.current = node;
+                if (typeof ref === 'function') {
+                    ref(node);
+                } else if (ref) {
+                    ref.current = node;
+                }
+            }}
             className={clsx(styles.mainTextarea, props.className)}
             aria-multiline="false"
             aria-readonly="false"

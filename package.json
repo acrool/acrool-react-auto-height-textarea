@@ -52,8 +52,7 @@
     "react-dom": "^18.x"
   },
   "dependencies": {
-    "clsx": "^2.1.1",
-    "framer-motion": "^11.3.19"
+    "clsx": "^2.1.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
