@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/acrool/acrool-react-auto-height-textarea/compare/v0.0.2-alpha.6...v0.0.2) (2024-08-11)
+
 ### [0.0.2-alpha.6](https://github.com/acrool/acrool-react-auto-height-textarea/compare/v0.0.2-alpha.5...v0.0.2-alpha.6) (2024-08-11)
 
 ### [0.0.2-alpha.5](https://github.com/acrool/acrool-react-auto-height-textarea/compare/v0.0.2-alpha.4...v0.0.2-alpha.5) (2024-08-10)
