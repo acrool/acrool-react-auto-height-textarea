@@ -51,8 +51,8 @@ const Example = () => {
     const [value, setValue] = useState('');
     
     return <Comment
-        value={editValue}
-        onChange={e => setEditValue(e.target.value)}
+        value={value}
+        onChange={e => setValue(e.target.value)}
         placeholder="Type your message"
         rows={1}
     />;

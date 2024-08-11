@@ -1,7 +1,6 @@
 import AuthHeightTextarea from '@acrool/react-auto-height-textarea';
 import {useEffect, useRef, useState} from 'react';
 
-import Textarea from '../../components/Textarea';
 
 
 const Example = () => {
