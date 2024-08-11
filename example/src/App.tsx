@@ -10,7 +10,7 @@ function App() {
     return (
         <GridThemeProvider>
             <div className="App">
-                {/*<Banner/>*/}
+                <Banner/>
                 <Example/>
 
             </div>
