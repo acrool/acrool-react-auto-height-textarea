@@ -1,6 +1,6 @@
 {
   "name": "@acrool/react-auto-height-textarea",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a react method to quickly combine buttons with Auto Height Textarea",
   "keywords": [
     "acrool",
