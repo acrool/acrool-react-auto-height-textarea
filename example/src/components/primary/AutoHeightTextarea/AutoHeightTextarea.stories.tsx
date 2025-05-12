@@ -1,12 +1,12 @@
-import AutoHeightTextarea from '@acrool/react-auto-height-textarea';
 import type {Meta, StoryObj} from '@storybook/react';
+import Example from "./Example";
 
 
 
 
 const meta = {
     title: 'Primary/AutoHeightTextarea',
-    component: AutoHeightTextarea,
+    component: Example,
     parameters: {
         layout: 'centered',
         actions: {argTypesRegex: '^on.*'},
@@ -21,7 +21,7 @@ const meta = {
     args: {
 
     },
-} satisfies Meta<typeof AutoHeightTextarea>;
+} satisfies Meta<typeof Example>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
