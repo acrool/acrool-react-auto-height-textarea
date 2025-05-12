@@ -51,7 +51,7 @@ import AutoHeightTextarea from '@acrool/react-auto-height-textarea';
 const Example = () => {
     const [value, setValue] = useState('');
     
-    return <Comment
+    return <AutoHeightTextarea
         value={value}
         onChange={e => setValue(e.target.value)}
         placeholder="Type your message"
